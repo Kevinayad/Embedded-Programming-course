@@ -38,7 +38,7 @@ int main() {
             // Checking if the user wishes to exit, if this is true the KEEP_RUNNING variable is changed to false which will cause the loop to exit.
             if (playAgain == 2) {
                 KEEP_RUNNING = false;
-            } else {
+            } else if (playAgain == 1) {
                 // In the case that the user whishes to keep playing the totalGuesses are reset to 0 and a new number is generated.
                 randomNumber = rand() % 100 +1 ;
                 totalGuesses = 0;
