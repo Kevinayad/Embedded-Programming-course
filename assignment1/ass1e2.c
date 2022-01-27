@@ -1,35 +1,37 @@
 #include<stdio.h>
-#define ROT 13
+#include<stdlib.h>
 
-int main(void)
+int main(int argc, char *argv[])//Main class
 {
-    int c,e;
+    int first,second;//Declarate "first" "second"
+    int ROT = atoi(argv[1]);//Define "ROT"
 
-    while((c=getchar())!=EOF) //Change this line Kevin 
+    while((first=getchar())!=EOF)//Loop for all letters
     {
-        if(c >='A' && c <='Z')
+        if(first >='A' && first <='Z')//Loop for capital letters
+    {
         {
-            if((e = c + ROT) <= 'Z')
-                putchar(e);
+            if((second = first + ROT) <= 'Z')//If letter stand before Z order
+                putchar(second);
             else
             {
-                   e = c - ROT;
-                putchar(e);
+                   second = first - ROT;//If character stand before Z order
+                putchar(second);
             }
         }
-        else if(c >='a' && c <='z')
+        else if(first >='a' && first <='z')//Loop for lower letters
+    {
         {
-            if((e= c + ROT) <= 'z')
-                putchar(e);
+            if((second= first + ROT) <= 'z')//If letter stand before Z order
+                putchar(second);
             else
             {
-                e = c - ROT;
-                putchar(e);
+                second = first - ROT;//If character stand before Z order
+                putchar(second);//print result
             }
         }
         else
-            putchar(c);
+            putchar(first);//If none of this works 
     }
-
 return 0;
 }
