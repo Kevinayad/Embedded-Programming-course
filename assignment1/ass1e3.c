@@ -1,3 +1,8 @@
+// Kevin, Anis, Vlad, group: 26 __ (2022) 
+// Work package 1 
+// Exercise 3
+// Submission code: ATb-Fc1 (provided by your TA-s) 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
