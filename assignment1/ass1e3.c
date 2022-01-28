@@ -1,3 +1,8 @@
+// Kevin, Anis, Vlad, group: 26 __ (2022) 
+// Work package 1 
+// Exercise 3
+// Submission code: ATb-Fc1 (provided by your TA-s) 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -16,7 +21,11 @@ int main() {
         scanf("%d", &currentGuess);
         // Incrementing the number of guesses for the current game.
         totalGuesses++;
-        if (currentGuess < randomNumber) {
+        if (currentGuess > 100 || currentGuess < 0) {
+            printf("Your guess was out of the range! Please pick a number between 1-100 \n");
+            continue;
+        }
+        else if (currentGuess < randomNumber) {
             /* Check if the guessed number is less than the generated number. 
             If this is true user is informed and rest of loop is skipped for this iteration. */
             printf("Your guess was too low, try again! \n");
