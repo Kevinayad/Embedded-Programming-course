@@ -2,7 +2,7 @@
 // Work package 1 
 // Exercise 2 
 // Submission code: ATb-Fc1 (provided by your TA-s) 
-// Limitations: use only English alphabet letters
+// Limitations: use only English alphabet letters (capital of lowercase)
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -11,13 +11,9 @@ int main(int argc, char *argv[])//Main class
 {
     int first,second;//Declarate "first" "second"
     int ROT = atoi(argv[1]);//Define "ROT"
-
+    
     while((first=getchar())!=EOF)//Loop for all letters
     {
-        //here should be checker @for loop@ if char in alp
-        //if not ^ Limitations 
-        //Suggested code: for(first <=65 && first >=123;++first;) 
-
          if(first >=65 && first <=90)//If the letter is capital
          {
             if((second = first + ROT) <= 90)//If letter "second" stand before Z order
@@ -42,6 +38,6 @@ int main(int argc, char *argv[])//Main class
          else{
              putchar(first);
          }
-    }
+      }
 return 0;
 }
