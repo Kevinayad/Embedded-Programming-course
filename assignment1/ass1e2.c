@@ -1,5 +1,11 @@
+// Kevin, Enis, Vlad, group: 26 __ (2022) 
+// Work package 1 
+// Exercise 2 
+// Submission code: ATb-Fc1 (provided by your TA-s) 
+// Limitations: use only English alphabet letters
 #include<stdio.h>
 #include<stdlib.h>
+
 
 int main(int argc, char *argv[])//Main class
 {
@@ -8,30 +14,34 @@ int main(int argc, char *argv[])//Main class
 
     while((first=getchar())!=EOF)//Loop for all letters
     {
-        if(first >='A' && first <='Z')//Loop for capital letters
-    {
-        {
-            if((second = first + ROT) <= 'Z')//If letter stand before Z order
+        //here should be checker @for loop@ if char in alp
+        //if not ^ Limitations 
+        //Suggested code: for(first <=65 && first >=123;++first;) 
+
+         if(first >=65 && first <=90)//If the letter is capital
+         {
+            if((second = first + ROT) <= 90)//If letter "second" stand before Z order
                 putchar(second);
             else
             {
-                   second = first - ROT;//If character stand before Z order
+                second = first - ROT ;//If letter "second" stand after Z order
                 putchar(second);
             }
-        }
-        else if(first >='a' && first <='z')//Loop for lower letters
-    {
-        {
-            if((second= first + ROT) <= 'z')//If letter stand before Z order
+         }
+     
+         else if(first >=97 && first <=122)//If the letter is lowercase
+         {
+            if((second= first + ROT) <= 122)//If letter "second" stand before Z order
                 putchar(second);
             else
             {
-                second = first - ROT;//If character stand before Z order
-                putchar(second);//print result
+                second = first - ROT;//If letter "second" stand after Z order
+                putchar(second);
             }
-        }
-        else
-            putchar(first);//If none of this works 
+         }
+         else{
+             putchar(first);
+         }
     }
 return 0;
 }
