@@ -63,14 +63,14 @@ REGTYPE* random_list(void) {
             REGTYPE *currentHead = head; // Creates a pointer to our head
             while (currentHead -> next != NULL) // Using this new pointer we traverse the list until we find the tail.
             {
-                currentHead = currentHead -> next;
+                currentHead = currentHead -> next; // Iterating until the tail
             }
-            currentHead -> next = node;
-            node -> prev = currentHead;
-            node -> next = NULL;
+            currentHead -> next = node; // Sets previous tail to point to new tail
+            node -> prev = currentHead; // Sets new tails prev pointer to previous tail
+            node -> next = NULL; // Tail points to Null
         }
     }
-    return head;
+    return head; // Returns list of head
 } 
 
 void printList(REGTYPE *head)  {
