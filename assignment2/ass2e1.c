@@ -7,8 +7,14 @@ typedef struct { //define ROBOT
         int ypos; 
         enum DIRECTION dir; 
 } ROBOT; 
-void move(int *x){//move x axis one step forward
-if(*x>=0&&*x<99){
+void move(int *x,int *y,enum DIRECTION dir){//move axis one step forward
+if(*y>=0&&*y<99&&dir==N){
+    *y=*y+1;
+}else if(*y>=0&&*y<99&&dir==S){
+    *y=*y-1;
+}else if(*x>=0&&*x<99&&dir==W){
+    *x=*x-1;
+}else if(*x>=0&&*x<99&&dir==O){
     *x=*x+1;
 }else{
     printf("cannot add anymore steps\n");
@@ -53,7 +59,7 @@ int main(){
          printf("enter m to move one step forward, enter t to to turn directions, enter e to finalize\n");//instructions
          scanf(" %c",&choice);//get choice from user
          if(choice=='m'){//if m move 1 step
-             move(&R1.xpos);
+             move(&R1.xpos,&R1.ypos,dir);
              
           }else if(choice=='t'){//if t turn direction
               turn(&c);//save in c
