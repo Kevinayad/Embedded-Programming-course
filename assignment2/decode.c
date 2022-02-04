@@ -1,3 +1,7 @@
+// Kevin, Enis, Vlad, group: 26 __ (2022) 
+// Work package 2
+// Exercise 4 
+// Submission code: ?D59Cd (provided by your TA-s)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

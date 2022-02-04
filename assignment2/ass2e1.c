@@ -1,3 +1,7 @@
+// Kevin, Enis, Vlad, group: 26 __ (2022) 
+// Work package 2
+// Exercise 1 
+// Submission code: ?D59Cd (provided by your TA-s)
 #include<stdio.h>
 #include<string.h>
     enum DIRECTION {N,O,S,W}; //Direction list
@@ -55,8 +59,9 @@ int main(){
     printf("please input the starting position y coordinate between 0 and 99: \n");
     scanf("%d",&R1.ypos);
     }while(R1.ypos<0||R1.ypos>99);
+    printf("enter m to move one step forward, enter t to to turn directions, enter e to finalize\n");//instructions
     while(choice!='e'){//keep repeating if user doesnt want to end
-         printf("enter m to move one step forward, enter t to to turn directions, enter e to finalize\n");//instructions
+         
          scanf(" %c",&choice);//get choice from user
          if(choice=='m'){//if m move 1 step
              move(&R1.xpos,&R1.ypos,dir);
@@ -71,9 +76,8 @@ int main(){
           }
         
     
-    
-    }
-    printf("\n");
     printf("X coordinate: %d Y coordinate: %d Direction: %s\n",R1.xpos,R1.ypos,getDirName(dir));//result
+    }
+    printf("Goodbye!\n");
     return 0;
 }
