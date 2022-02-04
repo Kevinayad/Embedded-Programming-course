@@ -1,3 +1,7 @@
+// Kevin, Enis, Vlad, group: 26 __ (2022) 
+// Work package 2
+// Exercise 4 
+// Submission code: ?D59Cd (provided by your TA-s)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,19 +16,19 @@ if((argv[1][0]>=65&&argv[1][0]<71)||(argv[1][0]>=48&&argv[1][0]<58)){//check tha
     if(argv[1][0]==53||argv[1][0]==54||argv[1][0]==55||argv[1][0]==68||argv[1][0]==69||argv[1][0]==70||strlen(argv[1])>2){//shouldnt match those values since they fail later on
         printf("input cannot match gear position\n");
     }else{
-    sum++;
+    sum++;//used to know both conditions are right
     }
     
 }
-if((argv[1][1]>=65&&argv[1][1]<71)||(argv[1][1]>=48&&argv[1][1]<58)){
-    if(argv[1][1]==67||argv[1][1]==68||argv[1][1]==69||argv[1][1]==70){
+if((argv[1][1]>=65&&argv[1][1]<71)||(argv[1][1]>=48&&argv[1][1]<58)){//check if value is accepted
+    if(argv[1][1]==67||argv[1][1]==68||argv[1][1]==69||argv[1][1]==70){//check if value doesnt match C D E F since they fail later on
         printf("input cannot match key position\n");
     }else{
-    sum++;
+    sum++;sum++;//used to know both conditions are right
     }
 }
-if(argc==2&&sum==2){
-    switch(argv[1][1]){
+if(argc==2&&sum==2){//if conditions are right apply
+    switch(argv[1][1]){//fill key_pos brake1 and brake 2 according to right values
         case '0':
         key_pos='0';
         brake1='0';
@@ -82,7 +86,7 @@ if(argc==2&&sum==2){
         break;
 
     }
-    switch(argv[1][0]){
+    switch(argv[1][0]){//fill engine_on and gear_pos according to right values
         case '0':
         engine_on='0';
         gear_pos='0';
@@ -125,7 +129,7 @@ if(argc==2&&sum==2){
         break;
 
     }
-    printf("Name\t\t\t Value\n");
+    printf("Name\t\t\t Value\n");//print the values
     printf("--------------------------------------\n");
     printf("engine_on\t\t %c\n",engine_on);
     printf("gear_pos\t\t %c\n",gear_pos);
@@ -133,9 +137,7 @@ if(argc==2&&sum==2){
     printf("brake1\t\t\t %c\n",brake1);
     printf("brake2\t\t\t %c\n",brake2);
 }else{
-    printf("error too many or too few arguemnts or bad input\n");
+    printf("error too many or too few arguemnts or bad input\n");//error case
 }
 return 0;
 }
-//65 70
-//48 57
