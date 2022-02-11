@@ -56,10 +56,10 @@ delay (1000);//makes program wait 1 second
     digitalWrite(3, LOW);//green LED off
     digitalWrite(4, HIGH);//red LED on
 }
-if(celsius>-12 celsius<=0){//if temperature within the range
+if(celsius>-12 && celsius<=0){//if temperature within the range
   lightFunction(1,20,celsius);
 }
-if(celsius>0 celsius<=20){//if temperature within the range
+if(celsius>0 && celsius<=20){//if temperature within the range
   lightFunction(21,60,celsius);
 }
 if(celsius>=21&&light<61){//if temperature higher than should be 
