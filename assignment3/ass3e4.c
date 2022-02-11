@@ -1,11 +1,14 @@
-
+// Kevin, Enis, Vlad, group: 26 __ (2022) 
+// Work package 3 
+// Exercise 4 
+// Submission code: ZzO-95 (provided by your TA-s) 
 char keys[4][4]={//definiton of all keys
   {'1','2','3','A'},
   {'4','5','6','B'},
   {'7','8','9','C'},
   {'*','0','#','D'}
 };
-void setup()
+void setup()// Initial value setups.
 {
   
   Serial.begin(9600);//turning on serial monitor
@@ -23,7 +26,7 @@ void setup()
   digitalWrite(11,HIGH);//setting row pin to high
 }
 
-void loop()
+void loop()//repeat until program stops
 {
   keyRec();//calling key recognition method
   delay(100);//allowing one key press in 100ms
@@ -38,6 +41,6 @@ void keyRec(){
     }
          pinMode(i,INPUT);//set back the column pins to input mode
   }
-  
+
   
 }
