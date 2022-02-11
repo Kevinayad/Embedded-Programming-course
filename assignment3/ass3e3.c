@@ -1,3 +1,7 @@
+// Kevin, Enis, Vlad, group: 26 __ (2022) 
+// Work package 3 
+// Exercise 3 
+// Submission code: ZzO-95 (provided by your TA-s) 
 #define sensorPin A0 // Pin that tempreature sensor is connected to.
 
 
