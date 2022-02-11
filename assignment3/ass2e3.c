@@ -9,10 +9,10 @@ void setup() // Initial value setups.
 
 void loop() // Loops over the program to actively control the board.
 {
-  float voltage = analogRead(sensorPin) * (5.0 / 1023.0); // Calculates the voltage from the analogread value.
-  int celsius = (voltage - 0.5) * 100; // Voltage to celsius formula https://forum.arduino.cc/t/project-3-cant-understand-voltage-to-temperature-formula/246851
-  									   // Formula provided by assignment gives wrong values.
-  										// Temperature (°C) = (VOUT – 500) / 10
+  float voltage = (analogRead(sensorPin) * (5.0 / 1023.0)) * 1000; // Calculates the voltage from the analogread value. https://www.arduino.cc/en/Tutorial/BuiltInExamples/ReadAnalogVoltage
+  int celsius = (voltage - 500) / 10; // minivolts to celsius formula according to the assignment.
+  									   
   Serial.println(celsius); // Prints the calculated celsius temperature.
   delay(500); // Makes the loop wait 0.5 seconds before continuing to next iteration.
 }
+
