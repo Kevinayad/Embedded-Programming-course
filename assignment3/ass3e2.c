@@ -14,7 +14,7 @@ pinMode(3, OUTPUT);
 pinMode(4, OUTPUT);
 }
 
-void lightFunction(int r1,int r2,int input){
+void lightFunction(int r1,int r2,int input){//function for LED control
     if(input<r1){
     digitalWrite(2, HIGH);//blue LED on
     digitalWrite(3, LOW);//green LED off
@@ -34,8 +34,9 @@ void lightFunction(int r1,int r2,int input){
 void loop()//loop over the arduino program 
 {
 
-celsius = map(((analogRead(A1) - 20) * 3.04), 0, 1023, -40, 125);//data translate to celsius
-//celsius=analogRead(A1); //resoures
+float voltage = (analogRead(A1) * (5.0 / 1023.0)) * 1000;//data translate to voltage.
+//https://www.arduino.cc/en/Tutorial/BuiltInExamples/ReadAnalogVoltage 
+int celsius = (voltage - 500) / 10;//this formula was taken from WP3 Exercise 3
 Serial.println("Templerature :");//Print temperature
 Serial.println(celsius);
 delay(1000);//makes program wait 1 second
@@ -44,8 +45,7 @@ delay(1000);//makes program wait 1 second
 light = analogRead(A0);//reads data from light sensor
 Serial.println("Light intensity :");//print light intensity
 Serial.println(light);
-delay (1000);//makes program wait 1 second
-  //int ac=((165-(100-(celsuis+40))*100)/165));
+delay (1000);//makes program wait 1 second  
 
   if(celsius<-12&&light<1){//if temperature lower than should be
     digitalWrite(2, LOW);//blue LED off
@@ -71,5 +71,6 @@ if(celsius>=21&&light<61){//if temperature higher than should be
     digitalWrite(3, HIGH);//green LED on
     digitalWrite(4, LOW);//red LED off
   }
-
 }
+
+
