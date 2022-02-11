@@ -2,6 +2,7 @@
 // Work package 3 
 // Exercise 5 
 // Submission code: ZzO-95 (provided by your TA-s) 
+#include<Keypad.h>
 char keys[4][4]={//definiton of all keys
   {'1','2','3','A'},
   {'4','5','6','B'},
@@ -25,5 +26,6 @@ void loop()//repeat until program stops
   Serial.println(key);//print key to serial monitor
   }
 }
+
 
 
