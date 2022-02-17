@@ -1,3 +1,7 @@
+// Kevin, Enis, Vlad, group: 26 __ (2022) 
+// Work package 4 
+// Exercise 1 
+// Submission code: 532&kLm (provided by your TA-s) 
 long miliVolts;//Variable for voltage
 int celsius = 0;//Variable for celsius
 volatile int flag=0;//Variable for interupt and flag
