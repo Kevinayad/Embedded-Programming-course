@@ -19,7 +19,7 @@ void setup() { // Setting up inital values.
   pixels.begin(); // Initialize neopixel object.
   pixels.setBrightness(100); // Sets pixel brightness.
   pixels.show(); // Updates the pixel object to the latest state.
-  pinMode(sensorPin, INPUT);
+  pinMode(sensorPin, INPUT); // Sets the sensor pin to behave as a input pin.
 }
 
 void loop() { // Arduino loop that keeps running until program is exited.
