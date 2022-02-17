@@ -1,7 +1,7 @@
-// Kevin, Enis, Vlad, group: 26 532&kLm (2022) 
+// Kevin, Enis, Vlad, group: 26 (2022) 
 // Work package 4 
 // Exercise 3
-// Submission code: ZzO-95 (provided by your TA-s) 
+// Submission code: 532&kLm (provided by your TA-s) 
 
 
 #include <Adafruit_NeoPixel.h> // Imports the NeoPixel library.
