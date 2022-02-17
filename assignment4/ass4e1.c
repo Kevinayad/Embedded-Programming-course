@@ -1,25 +1,25 @@
-long miliVolts;
-int celsius = 0;
-volatile int flag=0;
+long miliVolts;//Variable for voltage
+int celsius = 0;//Variable for celsius
+volatile int flag=0;//Variable for interupt and flag
 
 void setup()//setting up initial values
 {
-pinMode(A1, INPUT);
-Serial.begin(9600);
+pinMode(A1, INPUT);//A1 initiation
+Serial.begin(9600); // Starts serial communication for the arduino.
 attachInterrupt(digitalPinToInterrupt(A1),sec,CHANGE);//interupt declaration
 }
 
 void loop()//loop over the arduino program 
 {
 
-flag++;
+flag++;//declarate flag
 if(flag>0){ //interupt
 
 float voltage = (analogRead(A1) * (5.0 / 1023.0)) * 1000;//data translate to voltage.
 //https://www.arduino.cc/en/Tutorial/BuiltInExamples/ReadAnalogVoltage 
-int celsius = (voltage - 500) / 10;//this formula was taken from WP3 Exercise 3
+int celsius = (voltage - 500) / 10;// minivolts to celsius formula according to the assignment 3 exercise 3.
 Serial.println("Templerature :");//Print temperature
-Serial.println(celsius);
+Serial.println(celsius);//print temperature value 
 delay(1000);//makes program wait 1 second
 
 if(celsius<=0){//if temperature lower than 0
@@ -68,5 +68,5 @@ if(celsius>41&&celsius<50){//if temperature lower than 50 but higher than 41
 }
 }
 void sec(){//function which reverse value
-flag=!flag;
+flag=!flag;//reverse value of flag
 }
