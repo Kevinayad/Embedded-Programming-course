@@ -25,7 +25,7 @@ void setup() { // Setting up inital values.
 void loop() { // Arduino loop that keeps running until program is exited.
   uint32_t green = pixels.Color(0, 255, 0); // Green light.
   float voltage = analogRead(sensorPin) * (5.0 / 1023.0); // Reading voltage from sensorPin.
-  int celsius = (voltage - 0.5) * 100; // Calculating celsius from voltage. 
+  int celsius = (voltage - 0.5) * 100; // Calculating celsius from voltage. https://forum.arduino.cc/t/project-3-cant-understand-voltage-to-temperature-formula/246851
   lightsOn = (abs(celsius +40) - abs(celsius +40) %10) / 10; /* Calculates the number of celsius starting from -40 to 160. 
                                                                 The number is floored to the nearest full complete ten number. 
                                                                 Every light in the Neopixel represents 
